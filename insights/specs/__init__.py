@@ -394,6 +394,9 @@ class Specs(SpecSet):
     kubepods_cpu_quota = RegistryPoint(
         multi_output=True, no_obfuscate=['hostname', 'ipv4', 'ipv6', 'mac']
     )
+    kvdo_deduplication_timeout_interval = RegistryPoint(
+        no_obfuscate=['hostname', 'ipv4', 'ipv6', 'mac']
+    )
     lastupload = RegistryPoint(multi_output=True, no_obfuscate=['hostname', 'ipv4', 'ipv6', 'mac'])
     ld_library_path_global_conf = RegistryPoint(no_obfuscate=['ipv4', 'ipv6', 'mac'])
     leapp_migration_results = RegistryPoint()
@@ -641,6 +644,7 @@ class Specs(SpecSet):
     podman_list_containers = RegistryPoint()
     podman_list_images = RegistryPoint()
     podman_ps_all_json = RegistryPoint()
+    podman_ps_all_json_rootless = RegistryPoint()
     podman_system_info = RegistryPoint()
     postconf = RegistryPoint(filterable=True)
     postconf_builtin = RegistryPoint(filterable=True)
